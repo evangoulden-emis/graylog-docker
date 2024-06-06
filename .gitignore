@@ -4,6 +4,8 @@ graylog_syslog/graylog_data/libnative
 graylog_syslog/graylog_data/log
 graylog_syslog/graylog_data/plugin
 graylog_syslog/graylog_data/journal
+graylog_syslog/mongodb
+graylog_syslog/elasticsearch
 graylog_data/*
 !graylog_syslog/graylog_data/mongodb/.gitkeep
 !graylog_syslog/graylog_data/elasticsearch/.gitkeep
