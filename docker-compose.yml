@@ -5,9 +5,9 @@ services:
     hostname: "mongodb"
     image: "mongo"
     volumes:
-      - /Users/evangoulden/Code/graylog_syslog/mongodb:/data/db
-      - /Users/evangoulden/Code/graylog_syslog/mongodb:/data/configdb
-      - /Users/evangoulden/Code/graylog_syslog/mongodb:/data
+      - mongodb:/data/db
+      - mongodb:/data/configdb
+      - mongodb:/data
     restart: "on-failure"
     networks:
       - graylog
@@ -36,7 +36,7 @@ services:
     ports:
       - "9200:9200/tcp"
     volumes:
-        - /Users/evangoulden/Code/graylog_syslog/elasticsearch:/usr/share/elasticsearch/data
+        - elasticsearch:/usr/share/elasticsearch/data
     networks:
         - graylog
 
@@ -86,7 +86,7 @@ services:
       - "13302:13302/tcp"
       # ElasticSearch    
     volumes:
-          - /Users/evangoulden/Code/graylog_syslog/graylog_data:/usr/share/graylog/data   
+          - graylog_data:/usr/share/graylog/data   
     networks:
       - graylog
     restart: "on-failure"
@@ -94,4 +94,13 @@ services:
 networks:
   graylog:
     driver: "bridge"
+
+
+volumes:
+  graylog_data:
+    driver: local
+  elasticsearch:
+    driver: local
+  mongodb:
+    driver: local
 
