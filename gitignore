@@ -1,0 +1,7 @@
+graylog_data/contentpacks
+graylog_data/journal
+graylog_data/libnative
+graylog_data/log
+graylog_data/plugin
+mongo_db/
+elasticsearch/
