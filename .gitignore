@@ -4,5 +4,5 @@ graylog_data/libnative
 graylog_data/log
 graylog_data/plugin
 graylog_data/journal
-mongo_db/*
+mongodb/*
 elasticsearch/*
